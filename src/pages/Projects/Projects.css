@@ -1,0 +1,18 @@
+.project
+{
+    margin: 40px,0px;
+    margin-left: 140px;
+}
+
+.project
+{
+    padding-left: 130px;
+    margin-top: 40px;
+    background-color: blue;
+    margin-right: 60px;
+}
+
+.project h2{
+    font-weight: bold;
+    color: aqua;
+}
