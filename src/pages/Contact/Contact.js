@@ -15,7 +15,7 @@ const Contact = () => {
             setLoading(true);
             try {
                  const body={name,email,message};
-                 const data=await axios.post("http://localhost:8080/api/v1/portfolio/sendEmail",body);
+                 const data=await axios.post("https://portfolio-2afe.onrender.com/api/v1/portfolio/sendEmail",body);
                  setLoading(false);
                  if(data)
                  {
