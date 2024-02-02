@@ -3,3 +3,11 @@
   padding:0;
   box-sizing:border-box;
 }
+
+/* DARK MODE */
+
+#dark
+{
+  background-color: grey;
+  color:pink;
+}

@@ -30,3 +30,13 @@
     color: white;
     margin-top: 10px;
 }
+
+
+/* Mobile View */
+@media(max-width:600px)
+{
+    .sidebar{
+        display:none;
+    }
+}
+

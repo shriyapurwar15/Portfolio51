@@ -1,13 +1,18 @@
 import React from 'react';
 import image2 from './image2.jpg';
+// import './About.css'
+import Jump from 'react-reveal/Jump';
 
 const About = () => {
     return (
         <>
-            <div className="about" style={{boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"}}>
+            <Jump>
+            <div className="about" id="about" 
+            style={{boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"}}
+            >
                 <div className='row'>
                     <div className='col-md-6 about-img' >
-                        Image
+                        {/* Image */}
                         <img src={image2} alt="profile-pic" style={{ marginLeft: "300px", height: "350px" }} />
                     </div>
                     <div className='col-md-6 about-content' >
@@ -20,6 +25,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            </Jump>
         </>
     );
 }

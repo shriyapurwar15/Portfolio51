@@ -1,5 +1,9 @@
 import React from 'react';
 import './Menus.css'
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+
+import { Link } from 'react-scroll';
 import image from './image.jpg'
 import { CiHome } from "react-icons/ci";
 import { FcAbout } from "react-icons/fc";
@@ -15,84 +19,140 @@ const Menus = ({toggle}) => {
    <>
      
       {toggle ?
-      (<div className="navbar-profile-pic">
+      (<>
+      <Zoom>
+      <div className="navbar-profile-pic">
         <img src={image} alt="profile-pic"  />
       </div>
+      </Zoom>
      
+      </>
       ) : (<h1>Icons</h1>)
       }
 
 {toggle ?
-      (<div className="nav-items">
+
+       (<Fade left>
+      <div className="nav-items">
       <div className='nav-item'>
           <div className='nav-link' >
-          <CiHome size={25}/>
-          Home
+            <Link 
+            to="home" spy={true} smooth={true} offset={-100} duration={100}>
+           <CiHome size={25}/>
+            Home
+          </Link>
           </div>
           <div className='nav-link'>
+            <Link  to="about" spy={true} smooth={true} offset={-100} duration={100}>
           <FcAbout size={25} />
           About
+          </Link>
           </div>
           <div className='nav-link'>
-          <FaPortrait size={25}/>
-          Work Experience
-          </div>
-          <div className='nav-link'>
-          <FcBiotech size={25}/>
-          Tech Stack
-          </div>
-          <div className='nav-link'>
+          <Link 
+            to="education" spy={true} smooth={true} offset={-100} duration={100}>
           <FaBookReader size={25} />
           Education
+          </Link>
           </div>
+
+        
           <div className='nav-link'>
+          <Link 
+            to="techstack" spy={true} smooth={true} offset={-100} duration={100}>
+          <FcBiotech size={25}/>
+          Tech Stack
+          </Link>
+          </div>
+          
+          <div className='nav-link'>
+          <Link 
+            to="project" spy={true} smooth={true} offset={-100} duration={100}>
           <GoProjectSymlink size={25} />
           Project
+          </Link>
           </div>
-          <div className='nav-link'>
-          <FaUserLarge size={25}/>
-         Testimonial
-          </div>
-          <div className='nav-link'>
 
+          <div className='nav-link'>
+          <Link 
+            to="work" spy={true} smooth={true} offset={-100} duration={100}>
+          
+          <FaPortrait size={25}/>
+          Work Experience
+          </Link>
+          </div>
+          
+          <div className='nav-link'>
+          <Link 
+            to="contact" spy={true} smooth={true} offset={-100} duration={100}>
           <MdContactMail size={25}/>
           Contact
+          </Link>
           </div>
       </div>
     </div>
+    </Fade>
       ) : (<div className="nav-items">
       <div className='nav-item'>
           <div className='nav-link' >
-          <CiHome title="Home" size={25} />
+          <Link 
+            to="home" spy={true} smooth={true} offset={-100} duration={100}>
+           <CiHome size={25}/>
+            
+          </Link>
           
           </div>
           <div className='nav-link'>
-          <FcAbout title="About" size={25}/>
+          <Link  to="about" spy={true} smooth={true} offset={-100} duration={100}>
+          <FcAbout size={25} />
+        
+          </Link>
        
           </div>
           <div className='nav-link'>
-          <FaPortrait title=" Work " size={25} />
+          <Link 
+            to="education" spy={true} smooth={true} offset={-100} duration={100}>
+          <FaBookReader size={25} />
+         
+          </Link>
+          
+          </div>
+
+          
+          <div className='nav-link'>
+          <Link 
+            to="techstack" spy={true} smooth={true} offset={-100} duration={100}>
+          <FcBiotech size={25}/>
+          
+          </Link>
+          
+          </div>
+         
+          <div className='nav-link'>
+          <Link 
+            to="project" spy={true} smooth={true} offset={-100} duration={100}>
+          <GoProjectSymlink size={25} />
+       
+          </Link>
+        
+          </div>
+          <div className='nav-link'>
+          <Link 
+            to="work" spy={true} smooth={true} offset={-100} duration={100}>
+          
+          <FaPortrait size={25}/>
+          
+          </Link>
          
           </div>
-          <div className='nav-link'>
-          <FcBiotech  title="Tech " size={25}/>
           
-          </div>
-          <div className='nav-link'>
-          <FaBookReader title="Education" size={25}/>
-          
-          </div>
-          <div className='nav-link'>
-          <GoProjectSymlink title="  Project" size={25}/>
-        
-          </div>
-          <div className='nav-link'>
-          <FaUserLarge title="Testimonial" size={25} />
-        
-          </div>
           <div className='nav-link'>
 
-          <MdContactMail title="Contact" size={25}/>
+          <Link 
+            to="contact" spy={true} smooth={true} offset={-100} duration={100}>
+          <MdContactMail size={25}/>
+          
+          </Link>
           
           </div>
       </div>

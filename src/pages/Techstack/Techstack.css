@@ -9,6 +9,7 @@
 .techstack h2{
     font-weight: bold;
     color: aqua;
+    background-color: black;
 }
 
 .techstack .card {
